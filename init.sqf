@@ -10,11 +10,11 @@ if (isServer) then
 if (hasInterface) then
 {
 	// TODO - Find a better place for briefing variables
-	// Ejecucion - 
+	// Ejecucion - Como debe actuar el jugador
 	private _fal_execution = parseText "";
-	// Situacion - 
+	// Situacion - Lore de la mision.
 	private _fal_situation = parseText "";
-	// Mision    - 
+	// Mision    - Objetivos para cumplir la mision
 	private _fal_mision    = parseText "";
 
 	["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
