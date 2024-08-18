@@ -1,2 +1,2 @@
 # FAL-Template
-Mover los archivos a la carpeta raiz de tu mision
+Para instalar mover los archivos a la carpeta raiz de tu mision
