@@ -2,7 +2,8 @@ if (isServer) then
 {
 	["Initialize"] call BIS_fnc_dynamicGroups;
 	
-	call fal_fnc_createAdminZeus;
+	// TODO - Finish fal_fnc_createAdminZeus
+	//call fal_fnc_createAdminZeus;
 	call fal_fnc_setupRessuply;
 	[false] call fal_fnc_setupTasks;
 };
