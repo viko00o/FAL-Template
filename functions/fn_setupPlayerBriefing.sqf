@@ -2,43 +2,38 @@ params
 [
 	["_fal_execution", ""],
 	["_fal_situation", ""],
-	["_fal_mision", ""]
+	["_fal_mision", ""],
+	["_doBriefing", false]
 ];
 
-if (_fal_execution != "") then
-{
-	player createDiaryRecord 
-	[
-		"Diary",
-		[
-			"Ejecucion",
-			format["%1", _fal_execution];
-		]
-	];	
-};
+if(!_doBriefing) exitWith {};
 
-if (_fal_situation != "") then
-{
-	player createDiaryRecord
+player createDiaryRecord 
+[
+	"Diary",
 	[
-		"Diary",
-		[
-			"Situation",
-			format["%1", _fal_situation];
-		]
-	];
-};
+		"Ejecucion",
+		_fal_execution
+	]
+];	
 
-if (_fal_mision != "") then
-{
-	player createDiaryRecord
+player createDiaryRecord
+[
+	"Diary",
 	[
-		"Diary",
-		[
-			"Mision",
-			format["%1", _fal_mision];
-		]
-	];	
-};
+		"Situation",
+		_fal_situation
+	]
+];
+
+player createDiaryRecord
+[
+	"Diary",
+	[
+		"Mision",
+		_fal_mision
+	]
+];	
+
 
 true

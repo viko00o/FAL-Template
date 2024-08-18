@@ -4,14 +4,8 @@ if (!isNil{aero_player_markers_pos}) exitWith {}; // already running
 private ["_marker","_markerText","_temp","_unit","_vehicle","_markerNumber","_show","_injured","_text","_num","_getNextMarker","_getMarkerColor","_showAllSides","_showPlayers","_showAIs","_l"];
 
 _showAllSides=false;
-_showPlayers=false;
+_showPlayers=true;
 _showAIs=false;
-
-if(count _this==0) then {
-	_showAllSides=false;
-	_showPlayers=true;
-	_showAIs=!isMultiplayer;
-};
                          
 {
 	_l=toLower _x;
