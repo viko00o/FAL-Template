@@ -36,6 +36,7 @@ skipLobby 					   = 0;
 showUAVFeed 				   = 1;
 forceRotorLibSimulation 	   = 0;
 saving 						   = 0;
+enableDebugConsole			   = 1;
 
 // Recolector de basura
 corpseManagerMode 			   = 1;
