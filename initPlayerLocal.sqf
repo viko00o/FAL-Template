@@ -15,3 +15,4 @@ call fal_fnc_setupPlayerDragBody;
 call fal_fnc_setupPlayerEH;
 [] spawn fal_fnc_setupPlayerMarker;
 call fal_fnc_setupPlayerSpectator;
+[] spawn fal_fnc_setupVehicleRepair;
