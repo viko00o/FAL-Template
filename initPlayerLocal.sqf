@@ -1,18 +1,21 @@
-// TODO - Find a better place for briefing variables
 // Ejecucion - Como debe actuar el jugador
-private _fal_execution = "";
+private _execution = "";
 // Situacion - Lore de la mision.
-private _fal_situation = "";
+private _situation = "";
 // Mision ---- Objetivos para cumplir la mision
-private _fal_mision    = "";
+private _mision    = "";
 
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+0 enableChannel [false, false];
+2 enableChannel [false, false];
+4 enableChannel [false, false];
+5 enableChannel [false, false];
 player enableFatigue false;
 player setUnitTrait ["loadCoef", 0.0 , true];
 
-[_fal_execution, _fal_situation, _fal_mision, false] call fal_fnc_setupPlayerBriefing;
-call fal_fnc_setupPlayerDragBody;
-call fal_fnc_setupPlayerEH;
-[] spawn fal_fnc_setupPlayerMarker;
-call fal_fnc_setupPlayerSpectator;
-[] spawn fal_fnc_setupVehicleRepair;
+[_execution, _situation, _mision, false] execVM "scripts\setupPlayerBriefing.sqf";
+[] execVM "scripts\setupPlayerDragBody.sqf";
+[] execVM "scripts\setupPlayerEH.sqf";
+[] execVM "scripts\setupPlayerMarker.sqf";
+[] execVM "scripts\setupPlayerSpectator.sqf";
+[] execVM "scripts\setupVehicleRepair.sqf";
