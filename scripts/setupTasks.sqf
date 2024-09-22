@@ -3,7 +3,7 @@ params
 	["_doTasks", false]
 ];
 
-if (!_doTasks) exitWith {true};
+if (!_doTasks) exitWith {};
 
 [
 	true,

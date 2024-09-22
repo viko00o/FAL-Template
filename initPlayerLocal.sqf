@@ -1,11 +1,6 @@
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 player setVariable ["TAG_DeathLoadout", getUnitLoadout player];
 
-0 enableChannel [false, false];
-2 enableChannel [false, false];
-4 enableChannel [false, false];
-5 enableChannel [false, false];
-
 // Ejecucion - Como debe actuar el jugador
 private _execution = "";
 // Situacion - Lore de la mision.
@@ -18,6 +13,10 @@ private _mision    = "";
 [] execVM "scripts\setupPlayerDragBody.sqf";
 [] execVM "scripts\setupPlayerMarker.sqf";
 
+0 enableChannel [false, false];
+2 enableChannel [false, false];
+4 enableChannel [false, false];
+5 enableChannel [false, false];
 {
 	missionNamespace setVariable [_x, true];
 } forEach ["BIS_respSpecAllow3PPCamera", "BIS_respSpecLists"];
