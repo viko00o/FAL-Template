@@ -6,7 +6,6 @@ overviewPicture 			   = "images\logoRoundFAL.paa";
 onLoadName 					   = "";
 onLoadMission 				   = "";
 loadScreen 					   = "images\logoRoundFAL.paa";
-
 // Respawn de infanteria/vehiculos
 respawn 					   = 3;
 respawnDelay 				   = 15;
@@ -15,7 +14,6 @@ respawnDialog 				   = 0;
 respawnOnStart 				   = 0;
 respawnButton 			       = 1;
 respawnTemplates[] 			   = {"MenuPosition", "Spectator"};
-
 // Sistema medico
 ReviveMode 				       = 1;
 ReviveUnconsciousStateMode 	   = 0;
@@ -26,7 +24,6 @@ ReviveDelay 				   = 20;
 ReviveMedicSpeedMultiplier     = 3;
 ReviveForceRespawnDelay        = 3;
 ReviveBleedOutDelay            = 200;
-
 // NO TOCAR
 zeusCompositionScriptLevel 	   = 2;
 disabledAI 					   = 1;
@@ -37,7 +34,6 @@ showUAVFeed 				   = 1;
 forceRotorLibSimulation 	   = 0;
 saving 						   = 0;
 enableDebugConsole			   = 1;
-
 // Recolector de basura
 corpseManagerMode 			   = 1;
 wreckManagerMode 			   = 1;
@@ -50,16 +46,10 @@ corpseRemovalMaxTime 		   = 180;
 wreckLimit 					   = 15;
 wreckRemovalMinTime			   = 60;
 wreckRemovalMaxTime			   = 180;
-
 // Header y funciones
 class Header
 {
 	gameType 				   = COOP;
 	minPlayers 				   = 1;
 	maxPlayers 				   = 30;
-};
-
-class CfgFunctions
-{
-	#include "functions\functions.h"
 };

@@ -1,7 +1,7 @@
 ["Initialize"] call BIS_fnc_dynamicGroups;
 
-[false] execVM "scripts\setupTasks.sqf";
 [] execVM "scripts\setupVehicleRepair.sqf";
+[false] execVM "scripts\setupTasks.sqf";
 
 /*
 FAL_unitsLastPos = [];
@@ -26,5 +26,3 @@ addMissionEventHandler
 ];
 
 //[[_uid, _damage, _loadout, _pos]]
-
-// Test para ver si el webhook funciona!!!

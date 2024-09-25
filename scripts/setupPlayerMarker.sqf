@@ -1,16 +1,25 @@
-_mkr = createMarker[format["fal_mkr_%1", getPlayerUID player], position player];
-_mkr setMarkerText name player;
-_mkr setMarkerType "mil_triangle";
-_mkr setMarkerColor "colorBLUFOR";
+// Vars
+fal_markersUpdatetime = 1;
 
-while {true} do 
+_playerMarker = createMarker[format["fal_mkr_%1", getPlayerUID player], position player];
+_playerMarker setMarkerText name player;
+_playerMarker setMarkerType "mil_triangle";
+switch (side player) do
 {
-	waitUntil { sleep 0.5; true };
+	case west:        {_playerMarker setMarkerColor "colorBLUFOR"; playerMarkerColor = "colorBLUFOR";};
+	case east: 		  {_playerMarker setMarkerColor "colorOPFOR"; playerMarkerColor = "colorOPFOR";};
+	case independent: {_playerMarker setMarkerColor "colorGUER"; playerMarkerColor = "colorGUER";};
+	default 		  {_playerMarker setMarkerColor "colorCIV"; playerMarkerColor = "colorCIV";};
+};
 
-	_mkr setMarkerPos [getPos player select 0, getPos player select 1, 0];
-	_mkr setMarkerDir (getDir player);
+while {true} do
+{
+	waitUntil {sleep fal_markersUpdatetime; true};
+
+	_playerMarker setMarkerPos [getPos player select 0, getPos player select 1, 0];
+	_playerMarker setMarkerDir (getDir player);
 	
-	if (lifeState player == "HEALTHY" || lifeState player == "INJURED") then {_mkr setMarkerColor "colorBLUFOR"};
-	if (lifeState player == "INCAPACITATED") then {_mkr setMarkerColor "ColorRed"};
-	if (!alive player) then {_mkr setMarkerColor "ColorBlack"};
+	if (lifeState player == "HEALTHY" || lifeState player == "INJURED") then {_playerMarker setMarkerColor playerMarkerColor};
+	if (lifeState player == "INCAPACITATED") then {_playerMarker setMarkerColor "ColorRed"};
+	if (!alive player) then {_playerMarker setMarkerColor "ColorBlack"};
 };
