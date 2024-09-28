@@ -15,6 +15,7 @@ private _mision    = "";
 
 0 enableChannel [false, false];
 2 enableChannel [false, false];
+3 enableChannel [false, false];
 4 enableChannel [false, false];
 5 enableChannel [false, false];
 {

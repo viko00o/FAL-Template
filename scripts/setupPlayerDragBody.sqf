@@ -31,7 +31,7 @@ ROS_drag_fnc = {
 	player setVariable ["dragging",true,true];
 	_rankp = rank player +" "+ toupper name player;
 	_ranku = rank _hurtunit +" "+ toupper name _hurtunit;
-	[format ["%1\nis attempting to revive\n%2", _rankp, _ranku]] remoteExec ["hint",0,true];
+	//[format ["%1\nis attempting to revive\n%2", _rankp, _ranku]] remoteExec ["hint",0,true];
 	[_hurtunit, player] remoteExecCall ["disablecollisionwith", 0, _hurtunit];
 	// Back of head
 	_attachPos = _hurtunit modelToWorld [0,1.6,0];
@@ -70,7 +70,7 @@ ROS_drag_fnc = {
 				player forceWalk false;
 				_hurtunit setVariable ["dragged",false,true];
 				player setVariable ["dragging",false,true];
-				[""] remoteExec ["hint",0,true];
+				//[""] remoteExec ["hint",0,true];
 			};
 			sleep 1;
 		};
@@ -80,7 +80,7 @@ ROS_drag_fnc = {
 		params ["_hurtunit"];
 		waitUntil {_hurtunit getVariable "dragged" && (lifeState _hurtunit == "HEALTHY" or !alive _hurtunit)};
 		if (lifeState _hurtunit == "HEALTHY") then {
-			[format ["%1\nrevived by\n%2",rank _hurtunit +" "+ toUpper name _hurtunit, rank player +" "+ toUpper name player]] remoteExec ["hint",0,true];
+			//[format ["%1\nrevived by\n%2",rank _hurtunit +" "+ toUpper name _hurtunit, rank player +" "+ toUpper name player]] remoteExec ["hint",0,true];
 		};
 	};
 };
