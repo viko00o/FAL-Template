@@ -1,6 +1,6 @@
 params ["_newUnit", "_oldUnit", "_respawn", "_respawnDelay"];
 
-player setUnitLoadout (player getVariable "TAG_DeathLoadout");
+[player, [missionNamespace, "fal_loadout"]] call BIS_fnc_loadInventory;
 player enableFatigue false;
 player setUnitTrait ["loadCoef", 0.0, true];
 
