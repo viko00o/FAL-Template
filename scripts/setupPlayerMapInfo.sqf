@@ -26,9 +26,9 @@ SLT_fnc_enableScript = {
  
    comment "Parameters"; 
    RKAGOnlyShowMarkersOnMap = true; 
-   RKAGIncludePlayerGroups = false; 
+   RKAGIncludePlayerGroups = true; 
    RKAGHideFriendlyForces = true; 
-   RKAGMinGroupSize = 2; 
+   RKAGMinGroupSize = 1; 
    RKAGLastKnownLocationMarkerTime = 180; 
    RKAGBulletMarkerSpeed = 7.5; 
    RKAGBulletMarkerSize = [1,4]; 

@@ -29,84 +29,8 @@ SLT_fnc_enableScript = {
    with uiNamespace do  
    { 
     TMIMaxCursorRangeUnitMarker = 0.02; 
-    TMIMinMapZoomUnitMarker = 0.0010; 
- 
-    comment "[location,direction,isOnFoot,lifetime]"; 
-    TMIAllMapTrails = []; 
-    TMITrailLifetime = 30; 
-    TMITrailDistance = 10; 
-    TMIMaxAlpha = 0.5; 
-    TMITrailSize = 1; 
- 
-    TMI_fnc_mapTrailTick = { 
- 
-     comment "Add new trails"; 
-     private _unit = player; 
- 
-     private _lastTrailLocation = _unit getVariable "TMILastTrailLocation"; 
- 
-     if (isNil "_lastTrailLocation") then  
-     { 
-      _unit setVariable ["TMILastTrailLocation",(_unit modelToWorldVisual [0,0,0])]; 
-      _lastTrailLocation = (_unit modelToWorldVisual [0,0,0]); 
-     }; 
- 
-     private _currentLocation = (_unit modelToWorldVisual [0,0,0]); 
-     private _dist = _lastTrailLocation distance2D _currentLocation; 
- 
-     if (_dist >= TMITrailDistance) then  
-     { 
-      TMIAllMapTrails pushBack [_lastTrailLocation,getdir _unit,vehicle _unit isEqualTo _unit,TMITrailLifetime]; 
-      _unit setVariable ["TMILastTrailLocation",_currentLocation]; 
-     }; 
- 
-     private _updatedTrails = TMIAllMapTrails; 
-     { 
-      private _location = _x select 0; 
-      private _direction = _x select 1; 
-      private _isOnFoot = _x select 2; 
-      private _timeLeft = _x select 3; 
- 
-      comment "Update trails data"; 
-      _updatedTrails set [_forEachIndex,[_location,_direction,_isOnFoot,_timeleft-diag_deltaTime]]; 
-      if (_timeLeft <= 0) then {_updatedTrails deleteAt _forEachIndex;}; 
-     } foreach TMIAllMapTrails; 
- 
-     TMIAllMapTrails = _updatedTrails; 
-    }; 
- 
-    TMI_fnc_mapTrailDraw = { 
-     { 
-      private _location = _x select 0; 
-      private _direction = _x select 1; 
-      private _isOnFoot = _x select 2; 
-      private _timeLeft = _x select 3; 
-      private _alpha = linearConversion [0, 1, (_timeLeft/TMITrailLifetime), 0, TMIMaxAlpha, true]; 
-      private _color = [1,1,1,_alpha]; 
-      private _scale = 6.4 * worldSize / 8192 * ctrlMapScale (findDisplay 12 displayCtrl 51); 
-      private _size = (TMITrailSize) / _scale; 
-      private _iconFile = if (_isOnFoot)  
-      then {"\a3\ui_f\data\igui\cfg\simpletasks\types\walk_ca.paa"}  
-      else {"\a3\ui_f_curator\data\cfgcurator\entity_selected_ca.paa"}; 
- 
-      (findDisplay 12 displayCtrl 51) drawIcon 
-      [ 
-       _iconFile, 
-       _color, 
-       _location, 
-       _size, 
-       _size, 
-       _direction-10, 
-       "", 
-       0 
-      ]; 
-     } foreach TMIAllMapTrails; 
-    }; 
-   }; 
- 
-   TeamMapMissionEvent = addMissionEventHandler ["EachFrame",{ 
-    with uiNamespace do {call TMI_fnc_mapTrailTick;}; 
-   }]; 
+    TMIMinMapZoomUnitMarker = 0.0010;
+   };
     
    TeamMapEvent = (findDisplay 12 displayCtrl 51) ctrlAddEventHandler ["Draw",  
    { 
@@ -331,9 +255,7 @@ SLT_fnc_enableScript = {
        [_this select 0] call _draw; 
       }; 
      }; 
-    } foreach (if (count allPlayers isEqualTo 1) then {allUnits+allDeadMen} else {allPlayers}); 
-     
-    with uiNamespace do {call TMI_fnc_mapTrailDraw;}; 
+    } foreach (if (count allPlayers isEqualTo 1) then {allUnits+allDeadMen} else {allPlayers});  
    }]; 
   }; 
  } remoteExec ["BIS_fnc_call",0,"TeamMapIcons"]; 

@@ -5,6 +5,4 @@ params ["_newUnit", "_oldUnit", "_respawn", "_respawnDelay"];
 player enableFatigue false;
 player setUnitTrait ["loadCoef", 0.0, true];
 
-{_x addCuratorEditableObjects [player, true]} forEach allCurators;
-
 deleteVehicle _oldUnit;
