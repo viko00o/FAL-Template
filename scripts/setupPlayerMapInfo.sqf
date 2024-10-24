@@ -26,10 +26,10 @@ SLT_fnc_enableScript = {
  
    comment "Parameters"; 
    RKAGOnlyShowMarkersOnMap = true; 
-   RKAGIncludePlayerGroups = true; 
+   RKAGIncludePlayerGroups = false; 
    RKAGHideFriendlyForces = true; 
-   RKAGMinGroupSize = 1; 
-   RKAGLastKnownLocationMarkerTime = 180; 
+   RKAGMinGroupSize = 4; 
+   RKAGLastKnownLocationMarkerTime = 120; 
    RKAGBulletMarkerSpeed = 7.5; 
    RKAGBulletMarkerSize = [1,4]; 
    RKAGBulletMarkerColor = "ColorWhite"; 
