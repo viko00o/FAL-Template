@@ -1,8 +1,7 @@
 params
 [
 	["_killer", nil],
-	["_killed", nil],
-	["_ff", false]
+	["_killed", nil]
 ];
 
 _messages = 
@@ -26,14 +25,6 @@ _messages =
 	"%1 le dijo milsimer a %2"
 ];
 
-_messagesFF = 
-[
-	"FF: %1 es mogolico y le mato a %2"
-];
-
-if (_ff) then 
-{format [selectRandom _messagesFF, _killer, _killed] remoteExec ["systemChat"]}
-else
-{format [selectRandom _messages, _killer, _killed] remoteExec ["systemChat"]};
+format [selectRandom _messages, _killer, _killed] remoteExec ["systemChat"]
 
 true
