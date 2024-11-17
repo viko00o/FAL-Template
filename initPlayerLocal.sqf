@@ -13,4 +13,3 @@ player setUnitTrait ["loadCoef", 0.7, true];
 
 [] execVM "scripts\setupPlayerBriefing.sqf";
 [] execVM "scripts\setupVehicleRepair.sqf";
-[] execVM "scripts\setupPlayerDragBody.sqf";

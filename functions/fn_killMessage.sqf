@@ -22,9 +22,12 @@ _messages =
 	"%1 le toco la cola a %2",
 	"%1 esta disparando, deberias agacharte %2...",
 	"%1 es fan del lolicon, cuidado %2",
-	"%1 le dijo milsimer a %2"
+	"%1 le dijo milsimer a %2",
+	"%1 le tiró el cuerito a %2",
+	"%1 freno las funciones vitales de %2",
+	"%1 Dividió por Cero a %2"
 ];
 
-format [selectRandom _messages, _killer, _killed] remoteExec ["systemChat"]
+format [selectRandom _messages, _killer, _killed] remoteExec ["systemChat"];
 
 true
