@@ -4,6 +4,5 @@ class fal
 	{
 		file = "functions";
 		class killMessage {};
-		class setupPlayerZeus {};
 	};
 };
