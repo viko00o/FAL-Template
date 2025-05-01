@@ -4,19 +4,13 @@ params
 	["_killed", nil]
 ];
 
-//TODO - mensajes para FF
-_messagesFF =
-[
-	""
-];
-
-_messagesPve =
+_messagesPvE =
 [
 	"%1 se volvio puto",
 	"%1 vio una mujer...",
 	"%1 ahora es judio",
 	"%1 debuto con un travesti",
-	"%1 fue tocado por capitan Goce",
+	"%1 fue tocado por el capitan Goce",
 	"%1 fue groomeado... (al igual que SrCobayo)",
 	"Dopela lleno de crema a %1",
 	"%1 se sento en la torta",
@@ -42,7 +36,7 @@ _messagesPve =
 	"Dopela le enseñó la crema a %1",
 	"%1 le nego una empanada al Ciruja",
 	"%1 no te subas al helicoptero",
-	"%1 fue aplastado por la panza de Reznov",
+	"%1 fue aplastado por la panza de Renolito",
 	"el Ciruja le cirujeo los organos a %1",
 	"mejor adentro que afuera %1",
 	"%1 ahora esta en el cielo",
@@ -60,7 +54,6 @@ _messagesPve =
 	"%1 invirtio en $LIBRA",
 	"%1 no desayuno"
 ];
-
 _messagesPvP = 
 [
 	"%1 mandó a las 6 noches con Dopela a %2",
@@ -102,7 +95,7 @@ _messagesPvP =
 	"%1 se chapó a %2",
 	"%1 le mostró una hembra a %2",
 	"%1 convirtió en femboy a %2",
-	"%1 le metió un Rexona %2 en el orto",
+	"%1 le metió un Rexona a %2 en el orto",
 	"%2 le comió los huevos a %1",
 	"%2 fue penetrado por %1",
 	"%2 le hicieron rape4fun de la mano de %1",
@@ -157,21 +150,13 @@ _messagesPvP =
 	"%1 volvió judío a %2",
 	"%1 acusó de violín a %2"
 ];
-
-/* 
-
-TODO - Hacer la logic para diferenciar PvP y PvE
-TODO - Hacer toda la logica dentro de fn_killMessage
-
-if (isNil _killer) then 
+if (_killer in playableUnits) then
 {
-	format [selectRandom _messagesPvE, _killed] remoteExec ["systemChat"];
-} else 
+	format [selectRandom _messagesPvP, name _killer, name _killed] remoteExec ["systemChat"]
+}
+else
 {
-	format [selectRandom _messagesPvP, _killer, _killed] remoteExec ["systemChat"];
+	format [selectRandom _messagesPvE, name _killed] remoteExec ["systemChat"]
 };
-*/
-
-format [selectRandom _messagesPvP, _killer, _killed] remoteExec ["systemChat"];
 
 true

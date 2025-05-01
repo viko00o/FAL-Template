@@ -7,9 +7,8 @@
 {
 	missionNamespace setVariable [_x, true];
 } forEach ["BIS_respSpecAllow3PPCamera", "BIS_respSpecLists"];
-[player, [missionNamespace, "fal_loadout"]] call BIS_fnc_saveInventory;
 player enableFatigue false;
 player setUnitTrait ["loadCoef", 0.7, true];
-
 [] execVM "scripts\setupPlayerBriefing.sqf";
 [] execVM "scripts\setupVehicleRepair.sqf";
+onPreloadFinished {call fal_fnc_modBlacklist};

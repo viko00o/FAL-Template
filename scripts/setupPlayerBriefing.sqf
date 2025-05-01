@@ -1,4 +1,4 @@
-if (isServer) exitWith {};
+if (!hasInterface) exitWith {};
 
 player createDiaryRecord 
 [
