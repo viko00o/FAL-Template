@@ -1,3 +1,5 @@
+if (!hasInterface) exitWith {};
+
 _isUsingBlacklistedAddons = false;
 
 _addonBlacklist = 

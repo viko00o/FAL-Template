@@ -1,3 +1,5 @@
+if (!hasInterface) exitWith {};
+
 params
 [
 	["_killer", nil],
@@ -152,6 +154,7 @@ _messagesPvP =
 	"%1 acusó de violín a %2"
 ];
 
+// Para que renolito no se ponga triste
 if (getPlayerUID player == "543076569070129956") then {_messagesPvE deleteAt 13};
 
 if (_killer in playableUnits) then

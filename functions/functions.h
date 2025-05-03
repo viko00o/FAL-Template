@@ -7,5 +7,6 @@ class fal
 		class modBlacklist {};
 		class setupBriefing {};
 		class setupFieldRepair {};
+		class setupPlayer {};
 	};
 };
