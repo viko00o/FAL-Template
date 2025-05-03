@@ -5,10 +5,13 @@
 		briefings con mision situacion ejecucion y distincion de bando para que nunca lo usen en su puta vida 
 
 	Parameter(s):
-		_mision: STRING - (Optional, default "" significa sin entrada de mision)
-		_situation: STRING - (Optional, default "" significa sin entrada de situacion)
-		_execution: STRING - (Optional, default "" significa sin entrada de ejecucion)
-		_side: can be one of: (default side player significa que todos tienen el mismo briefing)
+		_mision: STRING - (Opcional, default "" significa sin entrada de mision)
+
+		_situation: STRING - (Opcional, default "" significa sin entrada de situacion)
+
+		_execution: STRING - (Opcional, default "" significa sin entrada de ejecucion)
+
+		_side: puede ser: (Opcional, default side player significa que no hay filtro de bando)
 			west - este briefing solo esta disponible para todo el bando bluefor
 			east - este briefing solo esta disponible para todo el bando opfor
 			independent - este briefing solo esta disponible para todo el bando independiente
