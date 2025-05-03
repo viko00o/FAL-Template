@@ -39,10 +39,10 @@ saving 						   = 0;
 enableDebugConsole			   = 1;
 
 // Distancias para el Recolector de basura - {corpses, wrecks, weaponholders}
-minPlayerDistance[] 		   = {1000, 1000, 500};
-disposalCheckPeriod 		   = 60;
+minPlayerDistance[] 		   = {1000, 1000, 300};
+disposalCheckPeriod 		   = 30;
 // Recolector de cadaveres
-corpseManagerMode 			   = 1;
+corpseManagerMode 			   = 3;
 corpseLimit 				   = 0;
 corpseRemovalMinTime 		   = 5;
 corpseRemovalMaxTime 		   = 5;
@@ -73,8 +73,8 @@ class CfgDebriefing
 {  
 	class EndBlacklist
 	{
-		title = "MODS NO AUTORIZADOS";
-		subtitle = "PRESENTES";
+		title = "ATENCION";
+		subtitle = "MODS NO AUTORIZADOS PRESENTES";
 		description = "Uno/s mods que estas usando NO estan permitidos en mision ya que o son trampa o podrian llegar a romper el server/mision. Porfavor descargalos para jugar...";
 		pictureBackground = "images\logoRoundFAL.paa";
 		picture = "images\logoRoundFAL.paa";
