@@ -1,4 +1,5 @@
 _isUsingBlacklistedAddons = false;
+
 _addonBlacklist = 
 [
     "PA_arsenal",
@@ -40,17 +41,20 @@ _addonBlacklist =
     "NNV"
 
 ];
+
 _playerBlacklistException = 
 [
-    "76561198130990529",
-    "76561198242382112"
+    "76561198130990529T",
+    "76561198242382112T"
 ];
 
 {
     if (isClass(configfile >> "CfgPatches" >> _x)) exitWith {_isUsingBlacklistedAddons = true};
     if (isClass(configfile >> "CfgFunctions" >> _x)) exitWith {_isUsingBlacklistedAddons = true};
 } forEach _addonBlacklist;
+
 if ((getPlayerUID player) in _playerBlacklistException) exitWith {};
+
 if (_isUsingBlacklistedAddons) exitWith 
 {
     format ["El jugador %1 tiene mods no permitidos.", (name player)] remoteExec ["systemChat"];

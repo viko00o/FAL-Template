@@ -5,5 +5,7 @@ class fal
 		file = "functions";
 		class killMessage {};
 		class modBlacklist {};
+		class setupBriefing {};
+		class setupFieldRepair {};
 	};
 };

@@ -54,6 +54,7 @@ _messagesPvE =
 	"%1 invirtio en $LIBRA",
 	"%1 no desayuno"
 ];
+
 _messagesPvP = 
 [
 	"%1 mandó a las 6 noches con Dopela a %2",
@@ -150,13 +151,12 @@ _messagesPvP =
 	"%1 volvió judío a %2",
 	"%1 acusó de violín a %2"
 ];
+
+if (getPlayerUID player == "543076569070129956") then {_messagesPvE deleteAt 13};
+
 if (_killer in playableUnits) then
-{
-	format [selectRandom _messagesPvP, name _killer, name _killed] remoteExec ["systemChat"]
-}
+{format [selectRandom _messagesPvP, name _killer, name _killed] remoteExec ["systemChat"]}
 else
-{
-	format [selectRandom _messagesPvE, name _killed] remoteExec ["systemChat"]
-};
+{format [selectRandom _messagesPvE, name _killed] remoteExec ["systemChat"]};
 
 true
