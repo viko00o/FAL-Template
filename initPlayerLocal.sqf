@@ -3,10 +3,10 @@
 	"",
 	"",
 	(side player)
-] call fal_fnc_setupBriefing
+] call fal_fnc_setupBriefing;
 
 // TODO - Test this
-showHUD 
+showHUD
 [
 	true, // scriptedHUD
 	true, // info
