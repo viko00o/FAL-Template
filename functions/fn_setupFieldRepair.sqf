@@ -21,12 +21,10 @@
 #define STR_SCRIPT_NAME "Field repair"
 #define STR_PUSH_APC "Push vehicle"
 
-zlt_repair_loop = [_this, 0, false] call BIS_fnc_param;
-
 if (isServer) then {
 	[] spawn {
 		_first = true;
-		while {_first or zlt_repair_loop} do {
+		while {_first} do {
 			{ 
 				if (getRepairCargo _x > 0) then {
 					_x setRepairCargo 0;

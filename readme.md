@@ -1,6 +1,3 @@
-# Template FAL
-Template para las misiones oficiales de FAL
-
 Recorda que si tenes una duda sobre el template o como hacer x cosa para tu mision podes taguearme en discord (@viko0o) en #chat-zeus o por md.  
 
 # Instalacion

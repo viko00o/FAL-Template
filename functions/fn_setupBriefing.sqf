@@ -1,10 +1,8 @@
 /*
-	Author: Viko
-
-	Description:
+	Descripcion:
 		briefings con mision situacion ejecucion y distincion de bando para que nunca lo usen en su puta vida 
 
-	Parameter(s):
+	Parametro(s):
 		_mision: STRING - (Opcional, default "" significa sin entrada de mision)
 
 		_situation: STRING - (Opcional, default "" significa sin entrada de situacion)
@@ -17,19 +15,15 @@
 			independent - este briefing solo esta disponible para todo el bando independiente
 			civlian - este briefing solo esta disponible para todo el bando civil
 
-	Returns:
-		BOOLEAN
-
-	Examples:
+	Ejemplo:
 		[
-			"van a volar en pedazos un cache de municion",
-			"csat se cojio a nato",
-			"mantener el sigilo a todo costo",
+			"van a volar en pedazos un cache de municion jugando como la otan",
+			"csat se cojio a la otan hace dos meses xq esta caro el dolar",
+			"mantener el sigilo a todo costo o van a ser culeados",
 			west
 		] call fal_fnc_setupBriefing;
 */
 
-// TODO - Test this
 params
 [
     ["_mision",    ""],

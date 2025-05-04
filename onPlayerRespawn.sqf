@@ -1,7 +1,4 @@
-params ["_newUnit", "_oldUnit", "_respawn", "_respawnDelay"];
+params ["_newUnit", "_oldUnit"];
 
-// FIX - main weapon is getting lost in the void...
-_newUnit setUnitLoadout (getUnitLoadout _oldUnit);
 [] call fal_fnc_setupPlayer;
-
 deleteVehicle _oldUnit;

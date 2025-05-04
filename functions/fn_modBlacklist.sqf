@@ -55,11 +55,11 @@ _playerBlacklistException =
     if (isClass(configfile >> "CfgFunctions" >> _x)) exitWith {_isUsingBlacklistedAddons = true};
 } forEach _addonBlacklist;
 
-if ((getPlayerUID player) in _playerBlacklistException) exitWith {};
+if (getPlayerUID player in _playerBlacklistException) exitWith {};
 
-if (_isUsingBlacklistedAddons) exitWith 
+if (_isUsingBlacklistedAddons) exitWith
 {
-    format ["El jugador %1 tiene mods no permitidos.", (name player)] remoteExec ["systemChat"];
+    format ["El jugador %1 tiene mods no permitidos.", name player] remoteExec ["systemChat"];
     endMission "EndBlacklist";
 };
 
