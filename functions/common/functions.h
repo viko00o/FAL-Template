@@ -2,7 +2,7 @@ class fal
 {
 	class functions
 	{
-		file = "functions";
+		file = "functions\common";
 		class killMessage {};
 		class modBlacklist {};
 		class setupBriefing {};
