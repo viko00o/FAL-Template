@@ -6,7 +6,7 @@ fal_currentLoadout = getUnitLoadout player;
 call fal_fnc_setupPlayer;
 
 0 enableChannel [false, false];
-1 enableChannel [false, false];
+1 enableChannel [true,  false];
 2 enableChannel [false, false];
 3 enableChannel [false, false];
 4 enableChannel [false, false];
@@ -15,18 +15,3 @@ call fal_fnc_setupPlayer;
 {
 	missionNamespace setVariable [_x, true];
 } forEach ["BIS_respSpecAllow3PPCamera", "BIS_respSpecLists"];
-
-showHUD
-[
-	true, // scriptedHUD
-	true, // info
-	true, // radar
-	true, // compass
-	true, // direction
-	true, // menu
-	false, // group
-	true, // cursors
-	true, // panels
-	true, // kills
-	true  // showIcon3D
-];

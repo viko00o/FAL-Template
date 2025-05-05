@@ -26,14 +26,13 @@
 
 params
 [
-    ["_mision",    ""],
-    ["_situation", ""],
-    ["_execution", ""],
+    ["_mision",    			  ""],
+    ["_situation", 		      ""],
+    ["_execution", 			  ""],
     ["_side",      (side player)]
 ];
 
 if (!hasInterface) exitWith {};
-
 if (side player != _side) exitWith {};
 
 if (_execution != "") then

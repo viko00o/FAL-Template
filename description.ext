@@ -69,6 +69,7 @@ class CfgDebriefing
 		subtitle = "MODS NO AUTORIZADOS PRESENTES";
 		description = "Uno/s mods que estas usando NO estan permitidos en mision ya que o son trampa o podrian llegar a romper el server/mision. Porfavor descargalos para jugar...";
 		pictureBackground = "images\logoRoundFAL.paa";
+		// LOW PRIORITY TODO: Get a nice photo...
 		picture = "images\logoRoundFAL.paa";
 		pictureColor[] = {1.0,1.0,1.0,1};
 	};

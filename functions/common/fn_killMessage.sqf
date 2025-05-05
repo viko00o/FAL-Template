@@ -157,6 +157,7 @@ _messagesPvP =
 // Para que renolito no se ponga triste
 if (getPlayerUID player == "543076569070129956") then {_messagesPvE deleteAt 13};
 
+// LOW PRIORITY FIXME: Zeus controlled units are getting passed as pvp messages
 if (_killer in playableUnits) then
 {format [selectRandom _messagesPvP, name _killer, name _killed] remoteExec ["systemChat"]}
 else

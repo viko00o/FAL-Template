@@ -1,3 +1,5 @@
+// LOW PRIORITY - remake this entire script making it more simple and using hold actions
+
 #define DEFAULT_FREPAIR_VER "1P"
 
 #define DEFAULT_FIELDREPAIR_EACH_PART_TIME 20
@@ -101,7 +103,7 @@ zlt_frpr_getPartsRepairTime = {
 };
 
 zlt_fnc_notify = {
-	 [ format["<t size='0.75' color='#ffff00'>%1</t>",_this], 0,1,5,0,0,301] spawn bis_fnc_dynamicText;
+	[ format["<t size='0.75' color='#ffff00'>%1</t>",_this], 0,1,5,0,0,301] spawn bis_fnc_dynamicText;
 };
 
 zlt_fnc_hastk = {

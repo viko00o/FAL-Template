@@ -41,7 +41,7 @@ _addonBlacklist =
     "ace_medical_engine",
     "YD_regen",
     "NNV"
-
+    // HIGH PRIORITY TODO: Add server breaking mods
 ];
 
 _playerBlacklistException = 
