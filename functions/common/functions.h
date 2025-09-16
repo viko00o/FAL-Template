@@ -9,7 +9,6 @@ class fal
 	{
 		file = "functions\common";
 		class killMessage {};
-		class modBlacklist {};
 		class setupBriefing {};
 		class setupFieldRepair {};
 		class setupPlayer {};
