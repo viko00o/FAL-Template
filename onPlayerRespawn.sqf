@@ -1,4 +1,8 @@
 params ["_newUnit", "_oldUnit"];
 
-[] call fal_fnc_setupPlayer;
+player enableFatigue false;
+player setUnitTrait ["loadCoef", 0.8, true];
+
+fal_currentLoadout = getUnitLoadout _oldUnit;
 deleteVehicle _oldUnit;
+player setUnitLoadout fal_currentLoadout;

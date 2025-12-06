@@ -7,6 +7,3 @@ Mover los archivos del Template a la carpeta raiz de tu mision (generalmente ubi
 Para añadir mision, situacion y ejecucion a tu escenario, usar la funcion fal_fnc_setupBriefing dentro de playerInitLocal.sqf
 
 Instrucciones de su uso en functions\fn_setupBriefing.sqf
-
-## Recursos usados
- - [Field Repair (voy a poner bien el credito cuando me acuerde de donde lo robe)]()
