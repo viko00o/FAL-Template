@@ -7,8 +7,8 @@ onLoadName 					   = "";
 onLoadMission 				   = "";
 loadScreen 					   = "images\logoRoundFAL.paa";
 // Respawn de infanteria/vehiculos
-respawnDelay 				   = 25;
-respawnVehicleDelay 		   = 25; // Si usas el modulo esto no afecta
+respawnDelay 				   = 15;
+respawnVehicleDelay 		   = 15; // Si usas el modulo esto no afecta
 
 // NO TOCAR
 respawn 					   = 3;

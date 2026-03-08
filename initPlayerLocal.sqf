@@ -4,9 +4,26 @@
 	missionNamespace setVariable [_x, true];
 } forEach ["BIS_respSpecAllow3PPCamera", "BIS_respSpecLists"];
 
-0 enableChannel [false, false];
-1 enableChannel [true,  true];
-2 enableChannel [false, false];
-3 enableChannel [true,  true];
-4 enableChannel [false, false];
-5 enableChannel [false, false];
+player enableFatigue false;
+player setUnitTrait ["loadCoef", 0.8, true];
+
+player addEventHandler 
+[
+	"Respawn",
+	{
+		params ["_unit", "_corpse"];
+		_unit enableFatigue false;
+		_unit setUnitTrait ["loadCoef", 0.8, true];
+		_unit setUnitLoadout (_unit getVariable "fal_playerLoadout");
+		deleteVehicle _corpse;
+	}
+];
+
+player addEventHandler 
+[
+	"Killed", 
+	{
+		params ["_unit", "_killer", "_instigator", "_useEffects"];
+		_unit setVariable ["fal_playerLoadout", getUnitLoadout _unit];
+	}
+];
